@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-GameService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/GameService"/>
+        <property name="wsdl-GameService" location="xml-resources/web-service-references/GameService/wsdl/localhost_8080/Server/GameService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/GameService" destdir="${build.generated.dir}/jax-wsCache/GameService" wsdl="${wsdl-GameService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/Server/GameService?WSDL" xnocompile="true" xendorsed="true" package="com.flappybird.service">
+            <depends file="${wsdl-GameService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/GameService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/GameService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-GameService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/GameService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/flappybird/service"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-GameService"/>
+</project>

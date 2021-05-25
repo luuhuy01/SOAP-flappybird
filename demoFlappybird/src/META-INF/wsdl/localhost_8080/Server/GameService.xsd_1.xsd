@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://service.flappybird.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://service.flappybird.com/">
+
+<xs:element name="checkLogin" type="tns:checkLogin"/>
+
+<xs:element name="checkLoginResponse" type="tns:checkLoginResponse"/>
+
+<xs:element name="getScoreHistory" type="tns:getScoreHistory"/>
+
+<xs:element name="getScoreHistoryResponse" type="tns:getScoreHistoryResponse"/>
+
+<xs:element name="getTopScoreUser" type="tns:getTopScoreUser"/>
+
+<xs:element name="getTopScoreUserResponse" type="tns:getTopScoreUserResponse"/>
+
+<xs:element name="saveRegister" type="tns:saveRegister"/>
+
+<xs:element name="saveRegisterResponse" type="tns:saveRegisterResponse"/>
+
+<xs:element name="saveScore" type="tns:saveScore"/>
+
+<xs:element name="saveScoreResponse" type="tns:saveScoreResponse"/>
+
+<xs:complexType name="getTopScoreUser">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getTopScoreUserResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:score" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="score">
+<xs:sequence>
+<xs:element name="createAt" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="score" type="xs:int"/>
+<xs:element name="user" type="tns:user" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="user">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="scores" type="tns:score" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getScoreHistory">
+<xs:sequence>
+<xs:element name="user" type="tns:user" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getScoreHistoryResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:score" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkLogin">
+<xs:sequence>
+<xs:element name="user" type="tns:user" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkLoginResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:user" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="saveScore">
+<xs:sequence>
+<xs:element name="user" type="tns:user" minOccurs="0"/>
+<xs:element name="score" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="saveScoreResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="saveRegister">
+<xs:sequence>
+<xs:element name="user" type="tns:user" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="saveRegisterResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
