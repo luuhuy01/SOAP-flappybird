@@ -1,7 +1,7 @@
 package com.flappybird.component;
 
-import com.flappybird.HomeView;
-import com.flappybird.LoginView;
+import com.flappybird.view.HomeView;
+import com.flappybird.view.LoginView;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;

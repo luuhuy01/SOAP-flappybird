@@ -9,9 +9,15 @@ import com.flappybird.user.Score;
 import com.flappybird.user.User;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /**
@@ -72,4 +78,27 @@ public class ScoreDAO extends DAO{
         return scores;
     }
      
+    public List<String> countOfPlay(){
+        List<String> list = new ArrayList<>();
+        String sql = "SELECT u.username, count(s.score) as countOfPlay "
+                + "FROM user u inner join score s on u.id =  s.user_id " 
+                + "group by u.username "
+                + "order by countOfPlay DESC;";
+        try {
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next()){
+                
+                String username = rs.getString(1);
+                int countOfPlay = rs.getInt(2);
+                String result = username +" "+ countOfPlay;
+                
+                list.add(result);
+            }         
+            
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return list;
+    }
 }

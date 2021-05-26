@@ -54,4 +54,35 @@ public class GameService {
         return scoreDAO.getTopScoreUser();
     }
 
+
+    @WebMethod(operationName = "addUser")
+    public Boolean addUser(@WebParam(name = "user") User user) {
+        UserDAO userDAO = new UserDAO();
+        return userDAO.addUser(user);
+    }
+
+    @WebMethod(operationName = "editUser")
+    public Boolean editUser(@WebParam(name = "user") User user) {
+        UserDAO userDAO = new UserDAO();
+        return userDAO.editUser(user);
+    }
+
+    @WebMethod(operationName = "deleteUser")
+    public Boolean deleteUser(@WebParam(name = "user") User user) {
+        UserDAO userDAO = new UserDAO();
+        return userDAO.deleteUser(user);
+    }
+
+    @WebMethod(operationName = "findUserByName")
+    public List<User> findUserByName(@WebParam(name = "name") String name) {
+        UserDAO userDAO = new UserDAO();
+        return userDAO.findUserByName(name);
+    }
+
+    @WebMethod(operationName = "countOfPlay")
+    public List<String> countOfPlay() {
+        ScoreDAO scoreDAO = new ScoreDAO();
+        return scoreDAO.countOfPlay();
+    }
+
 }

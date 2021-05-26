@@ -22,7 +22,10 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="password" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="phone" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="position" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="scores" type="{http://service.flappybird.com/}score" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="status" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *         &lt;element name="username" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -37,7 +40,10 @@ import javax.xml.bind.annotation.XmlType;
     "id",
     "name",
     "password",
+    "phone",
+    "position",
     "scores",
+    "status",
     "username"
 })
 public class User {
@@ -45,8 +51,11 @@ public class User {
     protected int id;
     protected String name;
     protected String password;
+    protected String phone;
+    protected String position;
     @XmlElement(nillable = true)
     protected List<Score> scores;
+    protected Boolean status;
     protected String username;
 
     /**
@@ -114,6 +123,54 @@ public class User {
     }
 
     /**
+     * Gets the value of the phone property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getPhone() {
+        return phone;
+    }
+
+    /**
+     * Sets the value of the phone property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setPhone(String value) {
+        this.phone = value;
+    }
+
+    /**
+     * Gets the value of the position property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getPosition() {
+        return position;
+    }
+
+    /**
+     * Sets the value of the position property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setPosition(String value) {
+        this.position = value;
+    }
+
+    /**
      * Gets the value of the scores property.
      * 
      * <p>
@@ -140,6 +197,30 @@ public class User {
             scores = new ArrayList<Score>();
         }
         return this.scores;
+    }
+
+    /**
+     * Gets the value of the status property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isStatus() {
+        return status;
+    }
+
+    /**
+     * Sets the value of the status property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setStatus(Boolean value) {
+        this.status = value;
     }
 
     /**

@@ -20,6 +20,9 @@ public class User implements Serializable{
     private String username;
     private String password;
     private String name;
+    private String phone;
+    private String position;
+    private Boolean status;
     private List<Score> Scores;
     
     public User() {
@@ -71,6 +74,30 @@ public class User implements Serializable{
 
     public void setScores(List<Score> Scores) {
         this.Scores = Scores;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public Boolean getStatus() {
+        return status;
+    }
+
+    public void setStatus(Boolean status) {
+        this.status = status;
     }
     
     

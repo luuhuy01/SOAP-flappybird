@@ -29,28 +29,16 @@ public interface GameService {
      * 
      * @param user
      * @return
-     *     returns com.flappybird.service.User
+     *     returns java.lang.Boolean
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "checkLogin", targetNamespace = "http://service.flappybird.com/", className = "com.flappybird.service.CheckLogin")
-    @ResponseWrapper(localName = "checkLoginResponse", targetNamespace = "http://service.flappybird.com/", className = "com.flappybird.service.CheckLoginResponse")
-    @Action(input = "http://service.flappybird.com/GameService/checkLoginRequest", output = "http://service.flappybird.com/GameService/checkLoginResponse")
-    public User checkLogin(
+    @RequestWrapper(localName = "addUser", targetNamespace = "http://service.flappybird.com/", className = "com.flappybird.service.AddUser")
+    @ResponseWrapper(localName = "addUserResponse", targetNamespace = "http://service.flappybird.com/", className = "com.flappybird.service.AddUserResponse")
+    @Action(input = "http://service.flappybird.com/GameService/addUserRequest", output = "http://service.flappybird.com/GameService/addUserResponse")
+    public Boolean addUser(
         @WebParam(name = "user", targetNamespace = "")
         User user);
-
-    /**
-     * 
-     * @return
-     *     returns java.util.List<com.flappybird.service.Score>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getTopScoreUser", targetNamespace = "http://service.flappybird.com/", className = "com.flappybird.service.GetTopScoreUser")
-    @ResponseWrapper(localName = "getTopScoreUserResponse", targetNamespace = "http://service.flappybird.com/", className = "com.flappybird.service.GetTopScoreUserResponse")
-    @Action(input = "http://service.flappybird.com/GameService/getTopScoreUserRequest", output = "http://service.flappybird.com/GameService/getTopScoreUserResponse")
-    public List<Score> getTopScoreUser();
 
     /**
      * 
@@ -60,12 +48,42 @@ public interface GameService {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "saveRegister", targetNamespace = "http://service.flappybird.com/", className = "com.flappybird.service.SaveRegister")
-    @ResponseWrapper(localName = "saveRegisterResponse", targetNamespace = "http://service.flappybird.com/", className = "com.flappybird.service.SaveRegisterResponse")
-    @Action(input = "http://service.flappybird.com/GameService/saveRegisterRequest", output = "http://service.flappybird.com/GameService/saveRegisterResponse")
-    public Boolean saveRegister(
+    @RequestWrapper(localName = "deleteUser", targetNamespace = "http://service.flappybird.com/", className = "com.flappybird.service.DeleteUser")
+    @ResponseWrapper(localName = "deleteUserResponse", targetNamespace = "http://service.flappybird.com/", className = "com.flappybird.service.DeleteUserResponse")
+    @Action(input = "http://service.flappybird.com/GameService/deleteUserRequest", output = "http://service.flappybird.com/GameService/deleteUserResponse")
+    public Boolean deleteUser(
         @WebParam(name = "user", targetNamespace = "")
         User user);
+
+    /**
+     * 
+     * @param user
+     * @return
+     *     returns java.lang.Boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "editUser", targetNamespace = "http://service.flappybird.com/", className = "com.flappybird.service.EditUser")
+    @ResponseWrapper(localName = "editUserResponse", targetNamespace = "http://service.flappybird.com/", className = "com.flappybird.service.EditUserResponse")
+    @Action(input = "http://service.flappybird.com/GameService/editUserRequest", output = "http://service.flappybird.com/GameService/editUserResponse")
+    public Boolean editUser(
+        @WebParam(name = "user", targetNamespace = "")
+        User user);
+
+    /**
+     * 
+     * @param name
+     * @return
+     *     returns java.util.List<com.flappybird.service.User>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findUserByName", targetNamespace = "http://service.flappybird.com/", className = "com.flappybird.service.FindUserByName")
+    @ResponseWrapper(localName = "findUserByNameResponse", targetNamespace = "http://service.flappybird.com/", className = "com.flappybird.service.FindUserByNameResponse")
+    @Action(input = "http://service.flappybird.com/GameService/findUserByNameRequest", output = "http://service.flappybird.com/GameService/findUserByNameResponse")
+    public List<User> findUserByName(
+        @WebParam(name = "name", targetNamespace = "")
+        String name);
 
     /**
      * 
@@ -89,6 +107,21 @@ public interface GameService {
      * 
      * @param user
      * @return
+     *     returns java.lang.Boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "saveRegister", targetNamespace = "http://service.flappybird.com/", className = "com.flappybird.service.SaveRegister")
+    @ResponseWrapper(localName = "saveRegisterResponse", targetNamespace = "http://service.flappybird.com/", className = "com.flappybird.service.SaveRegisterResponse")
+    @Action(input = "http://service.flappybird.com/GameService/saveRegisterRequest", output = "http://service.flappybird.com/GameService/saveRegisterResponse")
+    public Boolean saveRegister(
+        @WebParam(name = "user", targetNamespace = "")
+        User user);
+
+    /**
+     * 
+     * @param user
+     * @return
      *     returns java.util.List<com.flappybird.service.Score>
      */
     @WebMethod
@@ -97,6 +130,45 @@ public interface GameService {
     @ResponseWrapper(localName = "getScoreHistoryResponse", targetNamespace = "http://service.flappybird.com/", className = "com.flappybird.service.GetScoreHistoryResponse")
     @Action(input = "http://service.flappybird.com/GameService/getScoreHistoryRequest", output = "http://service.flappybird.com/GameService/getScoreHistoryResponse")
     public List<Score> getScoreHistory(
+        @WebParam(name = "user", targetNamespace = "")
+        User user);
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<com.flappybird.service.Score>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getTopScoreUser", targetNamespace = "http://service.flappybird.com/", className = "com.flappybird.service.GetTopScoreUser")
+    @ResponseWrapper(localName = "getTopScoreUserResponse", targetNamespace = "http://service.flappybird.com/", className = "com.flappybird.service.GetTopScoreUserResponse")
+    @Action(input = "http://service.flappybird.com/GameService/getTopScoreUserRequest", output = "http://service.flappybird.com/GameService/getTopScoreUserResponse")
+    public List<Score> getTopScoreUser();
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<java.lang.String>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "countOfPlay", targetNamespace = "http://service.flappybird.com/", className = "com.flappybird.service.CountOfPlay")
+    @ResponseWrapper(localName = "countOfPlayResponse", targetNamespace = "http://service.flappybird.com/", className = "com.flappybird.service.CountOfPlayResponse")
+    @Action(input = "http://service.flappybird.com/GameService/countOfPlayRequest", output = "http://service.flappybird.com/GameService/countOfPlayResponse")
+    public List<String> countOfPlay();
+
+    /**
+     * 
+     * @param user
+     * @return
+     *     returns com.flappybird.service.User
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "checkLogin", targetNamespace = "http://service.flappybird.com/", className = "com.flappybird.service.CheckLogin")
+    @ResponseWrapper(localName = "checkLoginResponse", targetNamespace = "http://service.flappybird.com/", className = "com.flappybird.service.CheckLoginResponse")
+    @Action(input = "http://service.flappybird.com/GameService/checkLoginRequest", output = "http://service.flappybird.com/GameService/checkLoginResponse")
+    public User checkLogin(
         @WebParam(name = "user", targetNamespace = "")
         User user);
 

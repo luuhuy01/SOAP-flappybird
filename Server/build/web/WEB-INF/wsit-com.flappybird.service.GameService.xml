@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ <definitions 
+ xmlns="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="GameService" targetNamespace="http://service.flappybird.com/" xmlns:tns="http://service.flappybird.com/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:fi="http://java.sun.com/xml/ns/wsit/2006/09/policy/fastinfoset/service" xmlns:tcp="http://java.sun.com/xml/ns/wsit/2006/09/policy/soaptcp/service" 
+ >
+    <message name="checkLogin"/>
+    <message name="checkLoginResponse"/>
+    <message name="saveRegister"/>
+    <message name="saveRegisterResponse"/>
+    <message name="saveScore"/>
+    <message name="saveScoreResponse"/>
+    <message name="getScoreHistory"/>
+    <message name="getScoreHistoryResponse"/>
+    <message name="getTopScoreUser"/>
+    <message name="getTopScoreUserResponse"/>
+    <message name="addUser"/>
+    <message name="addUserResponse"/>
+    <message name="editUser"/>
+    <message name="editUserResponse"/>
+    <message name="deleteUser"/>
+    <message name="deleteUserResponse"/>
+    <message name="findUserByName"/>
+    <message name="findUserByNameResponse"/>
+    <message name="countOfPlay"/>
+    <message name="countOfPlayResponse"/>
+    <portType name="GameService">
+        <operation name="checkLogin">
+            <input message="tns:checkLogin"/>
+            <output message="tns:checkLoginResponse"/>
+        </operation>
+        <operation name="saveRegister">
+            <input message="tns:saveRegister"/>
+            <output message="tns:saveRegisterResponse"/>
+        </operation>
+        <operation name="saveScore">
+            <input message="tns:saveScore"/>
+            <output message="tns:saveScoreResponse"/>
+        </operation>
+        <operation name="getScoreHistory">
+            <input message="tns:getScoreHistory"/>
+            <output message="tns:getScoreHistoryResponse"/>
+        </operation>
+        <operation name="getTopScoreUser">
+            <input message="tns:getTopScoreUser"/>
+            <output message="tns:getTopScoreUserResponse"/>
+        </operation>
+        <operation name="addUser">
+            <input message="tns:addUser"/>
+            <output message="tns:addUserResponse"/>
+        </operation>
+        <operation name="editUser">
+            <input message="tns:editUser"/>
+            <output message="tns:editUserResponse"/>
+        </operation>
+        <operation name="deleteUser">
+            <input message="tns:deleteUser"/>
+            <output message="tns:deleteUserResponse"/>
+        </operation>
+        <operation name="findUserByName">
+            <input message="tns:findUserByName"/>
+            <output message="tns:findUserByNameResponse"/>
+        </operation>
+        <operation name="countOfPlay">
+            <input message="tns:countOfPlay"/>
+            <output message="tns:countOfPlayResponse"/>
+        </operation>
+    </portType>
+    <binding name="GameServicePortBinding" type="tns:GameService">
+        <wsp:PolicyReference URI="#GameServicePortBindingPolicy"/>
+        <operation name="checkLogin">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="saveRegister">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="saveScore">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getScoreHistory">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getTopScoreUser">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="addUser">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="editUser">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="deleteUser">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="findUserByName">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="countOfPlay">
+            <input/>
+            <output/>
+        </operation>
+    </binding>
+    <service name="GameService">
+        <port name="GameServicePort" binding="tns:GameServicePortBinding"/>
+    </service>
+    <wsp:Policy wsu:Id="GameServicePortBindingPolicy">
+        <wsp:ExactlyOne>
+            <wsp:All/>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+</definitions>
