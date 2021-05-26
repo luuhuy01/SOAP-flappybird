@@ -166,7 +166,7 @@ public class UserDAO extends DAO {
     }
 
     public boolean deleteUser(User user) {
-        String sql = "UPDATE user SET status = '0' WHERE id = ?)";
+        String sql = "UPDATE user SET status = '0' WHERE id = ?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, user.getId());

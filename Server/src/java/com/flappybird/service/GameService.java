@@ -85,4 +85,10 @@ public class GameService {
         return scoreDAO.countOfPlay();
     }
 
+    @WebMethod
+    public Score getHighestScoreAUser(String username){
+        ScoreDAO sd = new ScoreDAO();
+        return sd.getHighestScoreAUser(username);
+    }
+    
 }

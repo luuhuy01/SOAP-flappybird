@@ -101,4 +101,38 @@ public class ScoreDAO extends DAO{
         }
         return list;
     }
+    
+    public Score getHighestScoreAUser(String username){
+        
+        String sql = "SELECT user.id, username, name, score.id, score, create_at "
+                + "FROM user INNER JOIN score ON user.id = score.user_id "
+                + "WHERE username = ? ORDER BY score.score DESC LIMIT 1";
+        
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, username);
+            
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+                int userId = rs.getInt("user.id");
+                String name = rs.getString("name");
+                User user = new User();
+                user.setId(userId);
+                user.setUsername(username);
+                user.setName(name);
+                int scoreId = rs.getInt("score.id");
+                int score = rs.getInt("score");
+                Date date = rs.getDate("create_at");
+                Score s = new Score();
+                s.setId(scoreId);
+                s.setScore(score);
+                s.setCreateAt(date);
+                s.setUser(user);
+                return s;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

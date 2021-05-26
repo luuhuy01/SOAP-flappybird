@@ -132,14 +132,12 @@ public class Bird {
         state = BIRD_DEAD;
         Game.setGameState(Game.STATE_OVER);
         if(user != null){
-            int i = JOptionPane.showConfirmDialog(new HomeView(user),"bạn có muốn lưu điểm không?" , "Lưu điểm", JOptionPane.YES_NO_OPTION);
+            int i = JOptionPane.showConfirmDialog(new HomeView(user),"Save?" , "Save score", JOptionPane.YES_NO_OPTION);
             if(i == 0)
                 port.saveScore(this.user, (int) counter.getCurrentScore());
         }else{
             new LoginView().setVisible(true);
-        }
-        
-       
+        }     
     }
 
     public void birdFlap() {
@@ -214,8 +212,8 @@ public class Bird {
         return counter.getCurrentScore();
     }
 
-    public long getBestScore() {
-        return counter.getBestScore();
+    public long getBestScore() {       
+        return counter.getBestScore();       
     }
 
     public int getBirdX() {

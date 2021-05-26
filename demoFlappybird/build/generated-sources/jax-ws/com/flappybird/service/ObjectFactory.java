@@ -24,6 +24,7 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _GetHighestScoreAUser_QNAME = new QName("http://service.flappybird.com/", "getHighestScoreAUser");
     private final static QName _CountOfPlayResponse_QNAME = new QName("http://service.flappybird.com/", "countOfPlayResponse");
     private final static QName _DeleteUser_QNAME = new QName("http://service.flappybird.com/", "deleteUser");
     private final static QName _GetTopScoreUserResponse_QNAME = new QName("http://service.flappybird.com/", "getTopScoreUserResponse");
@@ -40,6 +41,7 @@ public class ObjectFactory {
     private final static QName _CheckLogin_QNAME = new QName("http://service.flappybird.com/", "checkLogin");
     private final static QName _CheckLoginResponse_QNAME = new QName("http://service.flappybird.com/", "checkLoginResponse");
     private final static QName _CountOfPlay_QNAME = new QName("http://service.flappybird.com/", "countOfPlay");
+    private final static QName _GetHighestScoreAUserResponse_QNAME = new QName("http://service.flappybird.com/", "getHighestScoreAUserResponse");
     private final static QName _EditUserResponse_QNAME = new QName("http://service.flappybird.com/", "editUserResponse");
     private final static QName _SaveScoreResponse_QNAME = new QName("http://service.flappybird.com/", "saveScoreResponse");
     private final static QName _SaveRegister_QNAME = new QName("http://service.flappybird.com/", "saveRegister");
@@ -117,6 +119,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetHighestScoreAUserResponse }
+     * 
+     */
+    public GetHighestScoreAUserResponse createGetHighestScoreAUserResponse() {
+        return new GetHighestScoreAUserResponse();
+    }
+
+    /**
      * Create an instance of {@link CheckLogin }
      * 
      */
@@ -154,6 +164,14 @@ public class ObjectFactory {
      */
     public DeleteUser createDeleteUser() {
         return new DeleteUser();
+    }
+
+    /**
+     * Create an instance of {@link GetHighestScoreAUser }
+     * 
+     */
+    public GetHighestScoreAUser createGetHighestScoreAUser() {
+        return new GetHighestScoreAUser();
     }
 
     /**
@@ -226,6 +244,15 @@ public class ObjectFactory {
      */
     public User createUser() {
         return new User();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetHighestScoreAUser }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.flappybird.com/", name = "getHighestScoreAUser")
+    public JAXBElement<GetHighestScoreAUser> createGetHighestScoreAUser(GetHighestScoreAUser value) {
+        return new JAXBElement<GetHighestScoreAUser>(_GetHighestScoreAUser_QNAME, GetHighestScoreAUser.class, null, value);
     }
 
     /**
@@ -370,6 +397,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://service.flappybird.com/", name = "countOfPlay")
     public JAXBElement<CountOfPlay> createCountOfPlay(CountOfPlay value) {
         return new JAXBElement<CountOfPlay>(_CountOfPlay_QNAME, CountOfPlay.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetHighestScoreAUserResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.flappybird.com/", name = "getHighestScoreAUserResponse")
+    public JAXBElement<GetHighestScoreAUserResponse> createGetHighestScoreAUserResponse(GetHighestScoreAUserResponse value) {
+        return new JAXBElement<GetHighestScoreAUserResponse>(_GetHighestScoreAUserResponse_QNAME, GetHighestScoreAUserResponse.class, null, value);
     }
 
     /**

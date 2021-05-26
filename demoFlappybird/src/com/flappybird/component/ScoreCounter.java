@@ -1,5 +1,8 @@
 package com.flappybird.component;
 
+import com.flappybird.service.GameService;
+import com.flappybird.service.GameService_Service;
+import com.flappybird.service.User;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.File;
@@ -22,9 +25,9 @@ public class ScoreCounter {
 
 	private long score = 0; 
 	private long bestScore; 
-
-	private ScoreCounter() {
-		bestScore = -1;
+        
+	private ScoreCounter() {		
+                bestScore = -1;
 		try {
 			loadBestScore();
 		} catch (Exception e) {
@@ -36,7 +39,7 @@ public class ScoreCounter {
 		File file = new File(Constant.SCORE_FILE_PATH);
 		if (file.exists()) {
 			DataInputStream dis = new DataInputStream(new FileInputStream(file));
-			bestScore = dis.readLong();
+			bestScore = dis.readLong();                        
 			dis.close();
 		}
 	}

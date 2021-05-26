@@ -25,6 +25,8 @@
     <message name="findUserByNameResponse"/>
     <message name="countOfPlay"/>
     <message name="countOfPlayResponse"/>
+    <message name="getHighestScoreAUser"/>
+    <message name="getHighestScoreAUserResponse"/>
     <portType name="GameService">
         <operation name="checkLogin">
             <input message="tns:checkLogin"/>
@@ -66,6 +68,10 @@
             <input message="tns:countOfPlay"/>
             <output message="tns:countOfPlayResponse"/>
         </operation>
+        <operation name="getHighestScoreAUser">
+            <input message="tns:getHighestScoreAUser"/>
+            <output message="tns:getHighestScoreAUserResponse"/>
+        </operation>
     </portType>
     <binding name="GameServicePortBinding" type="tns:GameService">
         <wsp:PolicyReference URI="#GameServicePortBindingPolicy"/>
@@ -106,6 +112,10 @@
             <output/>
         </operation>
         <operation name="countOfPlay">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getHighestScoreAUser">
             <input/>
             <output/>
         </operation>

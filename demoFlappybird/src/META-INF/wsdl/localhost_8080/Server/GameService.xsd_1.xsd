@@ -24,6 +24,10 @@
 
 <xs:element name="findUserByNameResponse" type="tns:findUserByNameResponse"/>
 
+<xs:element name="getHighestScoreAUser" type="tns:getHighestScoreAUser"/>
+
+<xs:element name="getHighestScoreAUserResponse" type="tns:getHighestScoreAUserResponse"/>
+
 <xs:element name="getScoreHistory" type="tns:getScoreHistory"/>
 
 <xs:element name="getScoreHistoryResponse" type="tns:getScoreHistoryResponse"/>
@@ -72,6 +76,18 @@
 </xs:sequence>
 </xs:complexType>
 
+<xs:complexType name="getHighestScoreAUser">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getHighestScoreAUserResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:score" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="getScoreHistory">
 <xs:sequence>
 <xs:element name="user" type="tns:user" minOccurs="0"/>
@@ -84,18 +100,6 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="deleteUser">
-<xs:sequence>
-<xs:element name="user" type="tns:user" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="deleteUserResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:boolean" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
 <xs:complexType name="editUser">
 <xs:sequence>
 <xs:element name="user" type="tns:user" minOccurs="0"/>
@@ -103,6 +107,18 @@
 </xs:complexType>
 
 <xs:complexType name="editUserResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteUser">
+<xs:sequence>
+<xs:element name="user" type="tns:user" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteUserResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:boolean" minOccurs="0"/>
 </xs:sequence>
