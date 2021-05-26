@@ -211,7 +211,7 @@ public class AddView extends javax.swing.JFrame {
         if(check == true){
             JOptionPane.showMessageDialog(this, "successfully added account!");
             this.dispose();
-            new ManageUserView(user).setVisible(true);
+            new ManageUserView(this.user).setVisible(true);
         }else{
             JOptionPane.showMessageDialog(this, "Username is duplicate! please try again.");
         }
