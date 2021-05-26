@@ -45,10 +45,7 @@ public class CountOfPlayView extends javax.swing.JFrame {
 
         tableCount.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
                 "No", "Username", "Count"

@@ -20,7 +20,7 @@ public class AdminView extends javax.swing.JFrame {
     public AdminView(User user) {
         initComponents();
         this.user = user;
-        this.txtName.setText(user.getName());
+        this.nameUser.setText(user.getName());
     }
 
     /** This method is called from within the constructor to
@@ -32,18 +32,18 @@ public class AdminView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        title = new javax.swing.JLabel();
         btnManageUser = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        txtName = new javax.swing.JLabel();
+        nameUser = new javax.swing.JLabel();
         btnCountOfPlay = new javax.swing.JButton();
         btnSettingGame = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setText("ADMIN");
+        title.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        title.setText("ADMIN");
 
         btnManageUser.setText("Manage User");
         btnManageUser.addActionListener(new java.awt.event.ActionListener() {
@@ -54,7 +54,7 @@ public class AdminView extends javax.swing.JFrame {
 
         jLabel2.setText("Admin:");
 
-        txtName.setText("name");
+        nameUser.setText("name");
 
         btnCountOfPlay.setText("Statistics of the number of plays");
         btnCountOfPlay.addActionListener(new java.awt.event.ActionListener() {
@@ -91,12 +91,12 @@ public class AdminView extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(nameUser, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(165, 165, 165)
-                                .addComponent(jLabel1))
+                                .addComponent(title))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(159, 159, 159)
                                 .addComponent(btnLogout))
@@ -116,9 +116,9 @@ public class AdminView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(txtName))
+                    .addComponent(nameUser))
                 .addGap(5, 5, 5)
-                .addComponent(jLabel1)
+                .addComponent(title)
                 .addGap(34, 34, 34)
                 .addComponent(btnManageUser)
                 .addGap(28, 28, 28)
@@ -159,9 +159,9 @@ public class AdminView extends javax.swing.JFrame {
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnManageUser;
     private javax.swing.JButton btnSettingGame;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel txtName;
+    private javax.swing.JLabel nameUser;
+    private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 
 }

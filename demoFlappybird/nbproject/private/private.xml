@@ -5,11 +5,12 @@
         <group>
             <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/view/ManageUserView.java</file>
             <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/view/AddView.java</file>
+            <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/view/CountOfPlayView.java</file>
             <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/view/HomeView.java</file>
             <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/view/RankView.java</file>
             <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/view/LoginView.java</file>
-            <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/build/generated-sources/jax-ws/com/flappybird/service/User.java</file>
             <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/view/HistoryView.java</file>
+            <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/view/EditView.java</file>
             <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/view/AdminView.java</file>
         </group>
     </open-files>

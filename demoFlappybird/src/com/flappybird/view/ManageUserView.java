@@ -26,7 +26,7 @@ public class ManageUserView extends javax.swing.JFrame {
         initComponents();
         this.user = user;
         this.setTitle("Manage user");
-        txtName.setText(user.getName());
+        nameUser.setText(user.getName());
         userModel = (DefaultTableModel) tableUser.getModel();
         TableColumnModel tcm = tableUser.getColumnModel();
         
@@ -41,8 +41,8 @@ public class ManageUserView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        txtName = new javax.swing.JLabel();
+        title = new javax.swing.JLabel();
+        nameUser = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableUser = new javax.swing.JTable();
         inputSearch = new javax.swing.JTextField();
@@ -55,10 +55,10 @@ public class ManageUserView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel1.setText("Manage user");
+        title.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        title.setText("Manage user");
 
-        txtName.setText("name");
+        nameUser.setText("name");
 
         tableUser.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -133,11 +133,11 @@ public class ManageUserView extends javax.swing.JFrame {
                         .addComponent(btnBack))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(49, 49, 49)
-                        .addComponent(jLabel1)
+                        .addComponent(title)
                         .addGap(21, 21, 21)
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(nameUser, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(22, 22, 22))
             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
@@ -162,11 +162,11 @@ public class ManageUserView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(23, 23, 23)
-                        .addComponent(jLabel1))
+                        .addComponent(title))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtName)
+                            .addComponent(nameUser)
                             .addComponent(jLabel2))))
                 .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -250,11 +250,11 @@ public class ManageUserView extends javax.swing.JFrame {
     private javax.swing.JButton btnEdit;
     private javax.swing.JButton btnSearch;
     private javax.swing.JTextField inputSearch;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel nameUser;
     private javax.swing.JTable tableUser;
-    private javax.swing.JLabel txtName;
+    private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
     
     public void showData(String name){

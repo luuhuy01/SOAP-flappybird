@@ -22,7 +22,7 @@ public class EditView extends javax.swing.JFrame {
         initComponents();
         this.admin =admin;
         this.userEdit = userEdit;
-        jLabel8.setText(admin.getName());
+        nameUser.setText(admin.getName());
         txtUsername.setText(userEdit.getUsername());
         txtPassword.setText(userEdit.getPassword());
         txtName.setText(userEdit.getName());
@@ -42,7 +42,7 @@ public class EditView extends javax.swing.JFrame {
         txtPassword = new javax.swing.JTextField();
         txtName = new javax.swing.JTextField();
         txtPhone = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        title = new javax.swing.JLabel();
         cbPosition = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         cbStatus = new javax.swing.JComboBox<>();
@@ -51,7 +51,7 @@ public class EditView extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         btnCancel = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        nameUser = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -59,8 +59,8 @@ public class EditView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setText("Edit user");
+        title.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        title.setText("Edit user");
 
         cbPosition.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User", "Admin" }));
 
@@ -88,7 +88,7 @@ public class EditView extends javax.swing.JFrame {
 
         jLabel5.setText("Phone");
 
-        jLabel8.setText("jLabel8");
+        nameUser.setText("jLabel8");
 
         jLabel6.setText("Position");
 
@@ -125,11 +125,11 @@ public class EditView extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(154, 154, 154)
-                .addComponent(jLabel1)
+                .addComponent(title)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8)
+                .addComponent(nameUser)
                 .addGap(57, 57, 57))
         );
         layout.setVerticalGroup(
@@ -138,11 +138,11 @@ public class EditView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(21, 21, 21)
-                        .addComponent(jLabel1))
+                        .addComponent(title))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel8)
+                            .addComponent(nameUser)
                             .addComponent(jLabel9))))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -230,15 +230,15 @@ public class EditView extends javax.swing.JFrame {
     private javax.swing.JButton btnSave;
     private javax.swing.JComboBox<String> cbPosition;
     private javax.swing.JComboBox<String> cbStatus;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel nameUser;
+    private javax.swing.JLabel title;
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtPassword;
     private javax.swing.JTextField txtPhone;
