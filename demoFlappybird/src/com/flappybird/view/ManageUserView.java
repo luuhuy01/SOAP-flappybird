@@ -209,7 +209,7 @@ public class ManageUserView extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Please select one user!");
             return;
         }
-        int id = (int) tableUser.getModel().getValueAt(row, 0);
+        int id = Integer.parseInt(tableUser.getModel().getValueAt(row, 0).toString());
         String username = tableUser.getModel().getValueAt(row, 1).toString();
         String password = tableUser.getModel().getValueAt(row, 2).toString();
         String name = tableUser.getModel().getValueAt(row, 3).toString();
@@ -218,6 +218,7 @@ public class ManageUserView extends javax.swing.JFrame {
         
         User userEdit = new User();
         userEdit.setId(id);
+        System.out.println(id);
         userEdit.setUsername(username);
         userEdit.setPassword(password);
         userEdit.setName(name);

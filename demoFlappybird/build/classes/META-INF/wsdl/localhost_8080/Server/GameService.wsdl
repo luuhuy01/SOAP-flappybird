@@ -5,23 +5,29 @@
 <xsd:import namespace="http://service.flappybird.com/" schemaLocation="http://localhost:8080/Server/GameService?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="getHighestScoreAUser">
-<part name="parameters" element="tns:getHighestScoreAUser"/>
-</message>
-<message name="getHighestScoreAUserResponse">
-<part name="parameters" element="tns:getHighestScoreAUserResponse"/>
-</message>
 <message name="addUser">
 <part name="parameters" element="tns:addUser"/>
 </message>
 <message name="addUserResponse">
 <part name="parameters" element="tns:addUserResponse"/>
 </message>
-<message name="getTopScoreUser">
-<part name="parameters" element="tns:getTopScoreUser"/>
+<message name="getHighestScoreAUser">
+<part name="parameters" element="tns:getHighestScoreAUser"/>
 </message>
-<message name="getTopScoreUserResponse">
-<part name="parameters" element="tns:getTopScoreUserResponse"/>
+<message name="getHighestScoreAUserResponse">
+<part name="parameters" element="tns:getHighestScoreAUserResponse"/>
+</message>
+<message name="countOfPlay">
+<part name="parameters" element="tns:countOfPlay"/>
+</message>
+<message name="countOfPlayResponse">
+<part name="parameters" element="tns:countOfPlayResponse"/>
+</message>
+<message name="deleteUser">
+<part name="parameters" element="tns:deleteUser"/>
+</message>
+<message name="deleteUserResponse">
+<part name="parameters" element="tns:deleteUserResponse"/>
 </message>
 <message name="editUser">
 <part name="parameters" element="tns:editUser"/>
@@ -29,11 +35,17 @@
 <message name="editUserResponse">
 <part name="parameters" element="tns:editUserResponse"/>
 </message>
-<message name="countOfPlay">
-<part name="parameters" element="tns:countOfPlay"/>
+<message name="findUserByName">
+<part name="parameters" element="tns:findUserByName"/>
 </message>
-<message name="countOfPlayResponse">
-<part name="parameters" element="tns:countOfPlayResponse"/>
+<message name="findUserByNameResponse">
+<part name="parameters" element="tns:findUserByNameResponse"/>
+</message>
+<message name="getTopScoreUser">
+<part name="parameters" element="tns:getTopScoreUser"/>
+</message>
+<message name="getTopScoreUserResponse">
+<part name="parameters" element="tns:getTopScoreUserResponse"/>
 </message>
 <message name="saveRegister">
 <part name="parameters" element="tns:saveRegister"/>
@@ -53,18 +65,6 @@
 <message name="getScoreHistoryResponse">
 <part name="parameters" element="tns:getScoreHistoryResponse"/>
 </message>
-<message name="findUserByName">
-<part name="parameters" element="tns:findUserByName"/>
-</message>
-<message name="findUserByNameResponse">
-<part name="parameters" element="tns:findUserByNameResponse"/>
-</message>
-<message name="deleteUser">
-<part name="parameters" element="tns:deleteUser"/>
-</message>
-<message name="deleteUserResponse">
-<part name="parameters" element="tns:deleteUserResponse"/>
-</message>
 <message name="checkLogin">
 <part name="parameters" element="tns:checkLogin"/>
 </message>
@@ -72,25 +72,33 @@
 <part name="parameters" element="tns:checkLoginResponse"/>
 </message>
 <portType name="GameService">
-<operation name="getHighestScoreAUser">
-<input wsam:Action="http://service.flappybird.com/GameService/getHighestScoreAUserRequest" message="tns:getHighestScoreAUser"/>
-<output wsam:Action="http://service.flappybird.com/GameService/getHighestScoreAUserResponse" message="tns:getHighestScoreAUserResponse"/>
-</operation>
 <operation name="addUser">
 <input wsam:Action="http://service.flappybird.com/GameService/addUserRequest" message="tns:addUser"/>
 <output wsam:Action="http://service.flappybird.com/GameService/addUserResponse" message="tns:addUserResponse"/>
 </operation>
-<operation name="getTopScoreUser">
-<input wsam:Action="http://service.flappybird.com/GameService/getTopScoreUserRequest" message="tns:getTopScoreUser"/>
-<output wsam:Action="http://service.flappybird.com/GameService/getTopScoreUserResponse" message="tns:getTopScoreUserResponse"/>
+<operation name="getHighestScoreAUser">
+<input wsam:Action="http://service.flappybird.com/GameService/getHighestScoreAUserRequest" message="tns:getHighestScoreAUser"/>
+<output wsam:Action="http://service.flappybird.com/GameService/getHighestScoreAUserResponse" message="tns:getHighestScoreAUserResponse"/>
+</operation>
+<operation name="countOfPlay">
+<input wsam:Action="http://service.flappybird.com/GameService/countOfPlayRequest" message="tns:countOfPlay"/>
+<output wsam:Action="http://service.flappybird.com/GameService/countOfPlayResponse" message="tns:countOfPlayResponse"/>
+</operation>
+<operation name="deleteUser">
+<input wsam:Action="http://service.flappybird.com/GameService/deleteUserRequest" message="tns:deleteUser"/>
+<output wsam:Action="http://service.flappybird.com/GameService/deleteUserResponse" message="tns:deleteUserResponse"/>
 </operation>
 <operation name="editUser">
 <input wsam:Action="http://service.flappybird.com/GameService/editUserRequest" message="tns:editUser"/>
 <output wsam:Action="http://service.flappybird.com/GameService/editUserResponse" message="tns:editUserResponse"/>
 </operation>
-<operation name="countOfPlay">
-<input wsam:Action="http://service.flappybird.com/GameService/countOfPlayRequest" message="tns:countOfPlay"/>
-<output wsam:Action="http://service.flappybird.com/GameService/countOfPlayResponse" message="tns:countOfPlayResponse"/>
+<operation name="findUserByName">
+<input wsam:Action="http://service.flappybird.com/GameService/findUserByNameRequest" message="tns:findUserByName"/>
+<output wsam:Action="http://service.flappybird.com/GameService/findUserByNameResponse" message="tns:findUserByNameResponse"/>
+</operation>
+<operation name="getTopScoreUser">
+<input wsam:Action="http://service.flappybird.com/GameService/getTopScoreUserRequest" message="tns:getTopScoreUser"/>
+<output wsam:Action="http://service.flappybird.com/GameService/getTopScoreUserResponse" message="tns:getTopScoreUserResponse"/>
 </operation>
 <operation name="saveRegister">
 <input wsam:Action="http://service.flappybird.com/GameService/saveRegisterRequest" message="tns:saveRegister"/>
@@ -104,14 +112,6 @@
 <input wsam:Action="http://service.flappybird.com/GameService/getScoreHistoryRequest" message="tns:getScoreHistory"/>
 <output wsam:Action="http://service.flappybird.com/GameService/getScoreHistoryResponse" message="tns:getScoreHistoryResponse"/>
 </operation>
-<operation name="findUserByName">
-<input wsam:Action="http://service.flappybird.com/GameService/findUserByNameRequest" message="tns:findUserByName"/>
-<output wsam:Action="http://service.flappybird.com/GameService/findUserByNameResponse" message="tns:findUserByNameResponse"/>
-</operation>
-<operation name="deleteUser">
-<input wsam:Action="http://service.flappybird.com/GameService/deleteUserRequest" message="tns:deleteUser"/>
-<output wsam:Action="http://service.flappybird.com/GameService/deleteUserResponse" message="tns:deleteUserResponse"/>
-</operation>
 <operation name="checkLogin">
 <input wsam:Action="http://service.flappybird.com/GameService/checkLoginRequest" message="tns:checkLogin"/>
 <output wsam:Action="http://service.flappybird.com/GameService/checkLoginResponse" message="tns:checkLoginResponse"/>
@@ -120,15 +120,6 @@
 <binding name="GameServicePortBinding" type="tns:GameService">
 <wsp:PolicyReference URI="#GameServicePortBindingPolicy"/>
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="getHighestScoreAUser">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
 <operation name="addUser">
 <soap:operation soapAction=""/>
 <input>
@@ -138,7 +129,25 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="getTopScoreUser">
+<operation name="getHighestScoreAUser">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="countOfPlay">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="deleteUser">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -156,7 +165,16 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="countOfPlay">
+<operation name="findUserByName">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="getTopScoreUser">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -184,24 +202,6 @@
 </output>
 </operation>
 <operation name="getScoreHistory">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="findUserByName">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="deleteUser">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

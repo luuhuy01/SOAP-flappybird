@@ -135,7 +135,7 @@ public class UserDAO extends DAO {
     }
 
     public boolean editUser(User user) {
-        String sql = "UPDATE user SET username = ?, password = ?, name = ?, phone = ?, position = ?, status = ? WHERE id = ?)";
+        String sql = "UPDATE user SET username = ?, password = ?, name = ?, phone = ?, position = ?, status = ? WHERE id = ?";
         PreparedStatement ps;
         try {
             ps = con.prepareStatement(sql);
@@ -152,14 +152,8 @@ public class UserDAO extends DAO {
             ps.setInt(7, user.getId());
             
             ps.executeUpdate();
-            con.commit();
         } catch (SQLException ex) {
-            ex.printStackTrace();
-            try {
-                con.rollback();
-            } catch (SQLException ex1) {
-                ex1.printStackTrace();
-            }
+            ex.printStackTrace();          
             return false;
         }
         return true;

@@ -3,15 +3,27 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/view/ManageUserView.java</file>
+            <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/component/WelcomeAnimation.java</file>
             <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/view/AddView.java</file>
             <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/view/CountOfPlayView.java</file>
             <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/view/HomeView.java</file>
+            <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/component/MovingPipe.java</file>
+            <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/component/Pipe.java</file>
+            <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/component/GameElementLayer.java</file>
+            <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/view/HistoryView.java</file>
+            <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/view/AdminView.java</file>
+            <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/component/GameBackground.java</file>
+            <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/view/ManageUserView.java</file>
             <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/view/RankView.java</file>
             <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/view/LoginView.java</file>
-            <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/view/HistoryView.java</file>
+            <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/component/ScoreCounter.java</file>
+            <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/app/Game.java</file>
+            <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/util/Constant.java</file>
+            <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/view/RegisterView.java</file>
+            <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/component/GameOverAnimation.java</file>
             <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/view/EditView.java</file>
-            <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/view/AdminView.java</file>
+            <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/component/Bird.java</file>
+            <file>file:/D:/ProjectJava/SOAP-flappybird/demoFlappybird/src/com/flappybird/util/GameUtil.java</file>
         </group>
     </open-files>
 </project-private>

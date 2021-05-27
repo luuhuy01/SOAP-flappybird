@@ -100,18 +100,6 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="editUser">
-<xs:sequence>
-<xs:element name="user" type="tns:user" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="editUserResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:boolean" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
 <xs:complexType name="deleteUser">
 <xs:sequence>
 <xs:element name="user" type="tns:user" minOccurs="0"/>
@@ -119,6 +107,18 @@
 </xs:complexType>
 
 <xs:complexType name="deleteUserResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editUser">
+<xs:sequence>
+<xs:element name="user" type="tns:user" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editUserResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:boolean" minOccurs="0"/>
 </xs:sequence>

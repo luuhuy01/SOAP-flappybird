@@ -5,6 +5,7 @@
         <group>
             <file>file:/D:/ProjectJava/SOAP-flappybird/Server/src/java/com/flappybird/user/Score.java</file>
             <file>file:/D:/ProjectJava/SOAP-flappybird/Server/src/java/com/flappybird/dao/ScoreDAO.java</file>
+            <file>file:/D:/ProjectJava/SOAP-flappybird/Server/src/java/com/flappybird/service/GameService.java</file>
             <file>file:/D:/ProjectJava/SOAP-flappybird/Server/src/java/com/flappybird/dao/UserDAO.java</file>
             <file>file:/D:/ProjectJava/SOAP-flappybird/Server/src/java/com/flappybird/user/User.java</file>
         </group>
